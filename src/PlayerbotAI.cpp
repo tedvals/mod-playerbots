@@ -1390,7 +1390,7 @@ GameObject* PlayerbotAI::GetGameObject(GameObjectData const* gameObjectData)
     if (!map)
         return nullptr;
 
-    auto gameobjectBounds = map->GetGameObjectBySpawnIdStore().equal_range(gameObjectData->spawnId);
+    auto gameobjectBounds = map->GetGameObjectBySpawnIdStore().equal_range(gameObjectData->id);
     if (gameobjectBounds.first == gameobjectBounds.second)
         return nullptr;
 
